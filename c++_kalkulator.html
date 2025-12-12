@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C++ kalkulator</title>
+  <link rel="stylesheet" href="./CSS/standard_style.css">
+</head>
+<body class="bilder-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Min portefølje</a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åpne meny">☰</button>
+      <nav id="siteNav" class="site-nav" role="navigation">
+        <ul>
+          <li><a href="om-meg.html">Hvem er jeg</a></li>
+          <li><a href="bilder.html" >Bilder</a></li>
+          <li><a href="prosjekter-tema.html">Prosjekter</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="forklaring.html">Forklaringer</a></li> <!-- Nytt navigasjonsfelt -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Enkel C++ kalkulator</h1>
+    </header>
+        <div class="code_space">    
+            <p>
+            #include &ltiostream&gt<br>
+            using namespace std;<br>
+            int main() <br>
+            {<br>
+                int valg;<br>
+                float tall1;<br>
+                float tall2;<br>
+                int heltall1;<br>
+                int heltall2;<br>
+                while (valg != 7) {<br>
+                    cout &lt&lt"velg regne oprasjon: \n1 = +\n2 = -\n3 = *\n4 = /\n5 = heltallsdivisjon\n6 = %\n7 = Exit\n";<br>
+                    cin &gt&gt valg;<br>
+    <br>
+                    if( valg > 0 && valg != 6 && valg != 5 && valg != 7 && valg &lt 7){<br>
+                        cout &lt&lt "skriv inn to tall: \n";<br>
+                        cin &gt&gt tall1 &gt&gt tall2;<br>
+                    }<br>
+                    else if (valg > 0 && valg == 6 || valg == 5 && valg &lt 7){<br>
+                        cout &lt&lt "skriv inn to heltall: \n";<br>
+                        cin &gt&gt heltall1 &gt&gt heltall2;<br>
+                    }<br>
+                    switch (valg) {<br>
+                        case 1:<br>
+                            cout &lt&lt tall1 &lt&lt " + " &lt&lt tall2 &lt&lt " = " &lt&lt"\033[21m"&lt&lt tall1 + tall2 &lt&lt"\033[0m"&lt&lt endl;<br>
+                            break;<br>
+                        case 2:<br>
+                            cout &lt&lt tall1 &lt&lt " - " &lt&lt tall2 &lt&lt " = " &lt&lt"\033[21m"&lt&lt tall1 - tall2&lt&lt"\033[0m" &lt&lt endl;<br>
+                            break;<br>
+                        case 3:<br>
+                            cout &lt&lt tall1 &lt&lt " * " &lt&lt tall2 &lt&lt " = " &lt&lt"\033[21m"&lt&lt tall1 * tall2 &lt&lt"\033[0m"&lt&lt endl;<br>
+                            break;<br>
+                        case 4:<br>
+                            if (tall2 == 0){<br>
+                                cout &lt&lt "Kan ikke dele på 0 \n";<br>
+                            }<br>
+                            else{<br>
+                                cout &lt&lt tall1 &lt&lt " / " &lt&lt tall2 &lt&lt " = " &lt&lt"\033[21m"&lt&lt tall1 / tall2 &lt&lt"\033[0m"&lt&lt endl; <br>                   
+                            }<br>
+                            break;<br>
+                        case 5:<br>
+                            if (heltall2 == 0){<br>
+                                cout &lt&lt "Kan ikke dele på 0 \n";<br>
+                            }<br>
+                            else{<br>
+                                cout &lt&lt heltall1 &lt&lt " / " &lt&lt heltall2 &lt&lt " = " &lt&lt"\033[21m"&lt&lt heltall1 / heltall2 &lt&lt"\033[0m"&lt&lt endl; <br>                   
+                            }<br>
+                            break;                <br>
+                        case 6:<br>
+                            if (heltall2 == 0){<br>
+                                cout &lt&lt "Kan ikke gjøre modulus med 0 \n";<br>
+                            }<br>
+                            else{<br>
+                                cout &lt&lt heltall1 &lt&lt " % " &lt&lt heltall2 &lt&lt " = " &lt&lt"\033[21m"&lt&lt heltall1 % heltall2 &lt&lt"\033[0m"&lt&lt endl;<br>
+                            }<br>
+                            break;<br>
+                        case 7:<br>
+                            cout &lt&lt "Avslutter kalkulator \n";<br>
+                            break;<br>
+                        default:<br>
+                            cout &lt&lt "ugyldig valg, prøv igjen \n";<br>
+                            break;<br>
+                        <br>
+                    }<br>
+                }<br>
+    <br>
+                return 0;<br>
+                system("pause>0");<br>
+            }
+        </p>
+    </div>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container small">
+      <p>Laget av <i>Daniel Jørstad Sekkenes</i> © <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -29,6 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // =====================================
+// Randomisert fade-in for bildegalleriet
+// =====================================
+document.addEventListener("DOMContentLoaded", () => {
+    const figures = document.querySelectorAll(".gallery figure");
+    figures.forEach((fig) => {
+        const randomDelay = Math.random() * 0.4 + 0.1; // Random delay mellom 0.1s og 0.5s
+        fig.style.animationDelay = randomDelay + "s";
+    });
+});
+
+// =====================================
 // Lightbox for bildegalleri
 // =====================================
 document.addEventListener("DOMContentLoaded", () => {
