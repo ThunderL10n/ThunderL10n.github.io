@@ -337,7 +337,23 @@ body.about-page {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-
+.kurs ul li {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background: rgba(18, 24, 33, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  border: 2px solid rgba(92, 200, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.55), 0 0 30px rgba(92, 200, 255, 0.15);
+  text-align: left;
+  animation: fadeInUp .9s ease;
+}
+.overskrift_info{
+  border-top: #696969 5px solid;
+  padding: 0.5rem;
+}
 @media (max-width: 900px) {
   .grid.two {
     grid-template-columns: 1fr;
@@ -377,6 +393,7 @@ body.about-page {
   align-items: center;
   height: fit-content;
   margin: auto;
+  grid-row: span 2;
 }
 
 .panel.photo img {
@@ -632,6 +649,15 @@ body.bilder-ny-page {
 
 .plakat_gallery {
   grid-template-columns: repeat(3, 1fr);
+}
+.plakat_gallery img {
+  height: 300px;
+}
+@media(max-width:800px) {
+  .plakat_gallery { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width:500px) {
+  .plakat_gallery { grid-template-columns: 1fr; }
 }
 
 /* =========================================================
