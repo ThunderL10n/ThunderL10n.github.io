@@ -694,3 +694,27 @@ video {
   min-height: 480px;
   animation: fadeInUp .9s ease;
 }
+/* =========================================================
+    OPPSETT_AV_SWITCH.HTML STYLES
+   ========================================================= */
+
+.grid.four{
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-gap: 1rem;
+  margin: 5rem 0;
+}
+.grid.four h2{
+  text-align: center;
+}
+.container.svitsj a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: .25s;
+}
+
+.container.svitsj a:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}

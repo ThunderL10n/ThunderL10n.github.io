@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oppsett av svitsj</title>
+  <link rel="stylesheet" href="./CSS/standard_style.css">
+  <link href="bilder/logo/logo.png" type="image/x-icon" rel="icon">
+</head>
+<body class="about-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Min portefølje</a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åpne meny">☰</button>
+      <nav id="siteNav" class="site-nav" role="navigation">
+        <ul>
+          <li><a href="om-meg.html">Hvem er jeg</a></li>
+          <li><a href="bilder.html">Bilder</a></li>
+          <li><a href="prosjekter-tema.html">Prosjekter</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="forklaring.html">Forklaringer</a></li> <!-- Nytt navigasjonsfelt -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    
+    
+    
+    
+    
+    
+  <main class="container svitsj">
+    <h1>Oppsett av svitsj</h1>
+    <ul>    
+    <li><a href="#før_start">Kontroll før start</a></li>
+    <li><a href="#statisk_ip">Sette maskinen i statisk ip</a></li>
+    <li><a href="#inlogg">Tilkobling og innlogging på svitsj</a></li>
+    <li><a href="#tid">Stille inn klokke og justere dato</a></li>
+    <li><a href="#lagre">Lagre siste justering</a></li>
+    <li><a href="#backup">Ta backup av svitsj</a></li>
+    <li><a href="#kontrollere_software">Kontrollere svitsjens software versjon og laste ned ny</a></li>
+    <li><a href="#installere_software">Installere ny software og ny backup</a></li>
+    <li><a href="#vlan" id="før_start">Sette opp vlan</a></li>
+  </ul>
+
+
+    <section class="grid four">
+      <div class="text-block" style="grid-row: 1 / span 2; grid-column: 1;">
+        <h2>Kontroll før oppstart</h2>
+        <p>Sjekke strøm tilførsel</p>
+      </div>
+
+
+      <div class="panel photo" style="grid-row: 1; grid-column: 2;">
+        <img src="bilder/svitsj/strøm1.png" alt="Bilde av strømtilførsel" style="display: block;">
+        </div>
+      <div id="statisk_ip" class="panel photo" style="grid-row: 2; grid-column: 2;">
+        
+        <img src="bilder/svitsj/strøm2.png" alt="Bilde av strømtilførsel">
+      </div>
+
+      <div class="text-block" style="grid-column: 1 / span 2; grid-row: 3;">
+        <h2>Sette maskin i statisk IP</h2>
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 4;">
+        <p>Åpne nettverkstilkoblinger</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 4; grid-column: 1;">
+        <img src="bilder/svitsj/ip1.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 5;">
+        <p>Deaktiver trådløs internett</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 5; grid-column: 1;">
+        <img src="bilder/svitsj/ip2.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 6;">
+        <p>Høyre klikk ethernett. Trykk på egenskaper deretter internettprotokoll tcp4.<br>
+        Velg bruk følgende IP adresse. Og bruk en gyldig ip adresse og sett nett masken til riktig for svitsjen. Ved første gangs tilkobling vil dette være 192.168.1.(et tall mellom 2 og 254) for ip og 255.255.255.0 for nett maske trykk ok for å trykke deg ut
+        </p>
+      </div>
+
+      <div id="inlogg" class="panel photo" style="grid-row: 6; grid-column: 1;">
+        <img src="bilder/svitsj/ip3.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1 / span 2; grid-row: 7;">
+        <h2>Tilkobling og innlogging på svitsj</h2>
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 8;">
+        <p>Skriv in svitsjens ip adresse om den er uendret vil den være 192.168.1.1<br>
+        Bruker navnet er admin og passord 1234 igjen om det er uendret</p>
+      </div>
+
+      <div id="tid" class="panel photo" style="grid-row: 8; grid-column: 2;">
+        <img src="bilder/svitsj/inlogg.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1 / span 2; grid-row: 9;">
+        <h2>Stille inn klokke og justere dato</h2>
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 10;">
+        <p>Trykk på basic settings også general setup</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 10; grid-column: 1;">
+        <img src="bilder/svitsj/meny.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 11;">
+        <p>New time legge inn ny tid og ny dato husk pass på at den ikke er koblet på en use time server when bootup og at time server 1 2 og 3 er tom</p>
+      </div>
+
+      <div id="lagre" class="panel photo" style="grid-row: 11; grid-column: 1;">
+        <img src="bilder/svitsj/tid.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1 / span 2; grid-row: 12;">
+        <h2>Lagre siste justering</h2>
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 13;">
+        <p>Trykk på apply også save</p>
+      </div>
+
+      <div  id="backup" class="panel photo" style="grid-row: 13; grid-column: 2;">
+        <img src="bilder/svitsj/tid.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1 / span 2; grid-row: 14;">
+        <h2>Ta backup av svitsj</h2>
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 15;">
+        <p>Trykk managment også maintenance</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 15; grid-column: 1;">
+        <img src="bilder/svitsj/backup1.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 16;">
+        <p>Trykk på backup configuration</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 16; grid-column: 1;">
+        <img src="bilder/svitsj/backup2.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 17;">
+        <p>Velg hvilken konfigurasjon man vil lage backup til også trykke backup</p>
+      </div>
+
+      <div id="kontrollere_software" class="panel photo" style="grid-row: 17; grid-column: 1;">
+        <img src="bilder/svitsj/backup3.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1 / span 2; grid-row: 18;">
+        <h2>Kontrollere svitsjens software versjon og laste ned ny</h2>
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 19;">
+        <p>Sjekk hvilken versjon firmwaren på svitsjen har. Søk opp nøyaktig model navn på svitsjen og last ned eventuell nyere programvare.</p>
+      </div>
+
+      <div id="installere_software" class="panel photo" style="grid-row: 19; grid-column: 2;">
+        <img src="bilder/svitsj/meny.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1 / span 2; grid-row: 20;">
+        <h2>Installere ny software og ny backup</h2>
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 21;">
+        <p>Pakk ut zip filen</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 21; grid-column: 1;">
+        <img src="bilder/svitsj/ny_software1.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 22;">
+        <p>Gå inn til managment og maintenance igjen</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 22; grid-column: 1;">
+        <img src="bilder/svitsj/meny.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 23;">
+        <p>Trykk på firmware upgrade</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 23; grid-column: 1;">
+        <img src="bilder/svitsj/ny_software2.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 2; grid-row: 24;">
+        <p>Trykk på velg fil også velger du bin filen i den mappa du tidligere pakket ut også trykker du bare på upgrade.</p>
+        <a href="#backup">Ta ny backup</a>
+      </div>
+
+      <div id="vlan" class="panel photo" style="grid-row: 24; grid-column: 1;">
+        <img src="bilder/svitsj/ny_software3.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+
+      <div class="text-block" style="grid-column: 1 / span 2; grid-row: 25;">
+        <h2>Sette opp vlan</h2>
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 26;">
+        <p>Trykk på advanced application også på VLAN</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 26; grid-column: 2;">
+        <img src="bilder/svitsj/meny.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 27;">
+        <p>Trykk på VLAN configuration</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 27; grid-column: 2;">
+        <img src="bilder/svitsj/vlan1.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 28;">
+        <p>Trykk på static VLAN setup</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 28; grid-column: 2;">
+        <img src="bilder/svitsj/vlan2.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 29;">
+        <p>Siden VLAN2 nettverket er koblet til port 1 på svitsjen, velg «Fixed» for å konfigurere port 1 til å være ett permanent medlem bare til VLAN-et.<br>
+        Trykk add også save</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 29; grid-column: 2;">
+        <img src="bilder/svitsj/vlan3.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 30;">
+        <p>Trykk advanced application også trykk på VLAN</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 30; grid-column: 2;">
+        <img src="bilder/svitsj/meny.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 31;">
+        <p>Trykk VLAN configuration</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 31; grid-column: 2;">
+        <img src="bilder/svitsj/vlan1.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+      
+      <div class="text-block" style="grid-column: 1; grid-row: 32;">
+        <p>Trykk VLAN port setup</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 32; grid-column: 2;">
+        <img src="bilder/svitsj/vlan2.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 33;">
+        <p>Bytt PVID fra Port 1 til 2<br>Trykk apply<br>Trykk på save</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 33; grid-column: 2;">
+        <img src="bilder/svitsj/vlan4.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 34;">
+        <p>Velg basic setting, så IP setup også IP configuration</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 34; grid-column: 2;">
+        <img src="bilder/svitsj/vlan5.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 35;">
+        <p>Change managment IP adresses så apply og save</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 35; grid-column: 2;">
+        <img src="bilder/svitsj/vlan6.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 36;">
+        <p>Bytt ethernett utgangen til Port 1<br> Endre IP-adressen din til 192.168.2.xx (ikke bruk 1)</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 36; grid-column: 2;">
+        <img src="bilder/svitsj/vlan7.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+      <div class="text-block" style="grid-column: 1; grid-row: 37;">
+        <p>sjekk hvis du kan koble deg til svitsjen via Port 1 med den nye IP-adressen for VLAN 2</p>
+      </div>
+
+      <div class="panel photo" style="grid-row: 37; grid-column: 2;">
+        <img src="bilder/svitsj/vlan8.png" alt="bilde av at nettverkstilkoblinger er åpnet">
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small">
+      <p>Laget av <i>Daniel Jørstad Sekkenes</i> © <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
