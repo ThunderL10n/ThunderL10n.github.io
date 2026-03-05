@@ -5,6 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearSpan = document.getElementById('year');
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
+// =====================================
+// Sett alder automatisk
+// =====================================
+  const ageSpan = document.getElementById('alder');
+  const birthDate = new Date(2009, 6, 28); 
+  if (ageSpan){
+    let age = new Date().getFullYear() - birthDate.getFullYear();
+    if (new Date().getMonth() < birthDate.getMonth() || (new Date().getMonth() === birthDate.getMonth() && new Date().getDay() < birthDate.getDay())) age--;
+    ageSpan.textContent = age;
+  };
+
+
   // =====================================
   // Mobilnavigasjon
   // =====================================

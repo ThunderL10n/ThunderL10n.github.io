@@ -329,6 +329,11 @@ body.about-page {
   background-color: var(--bg);
 }
 
+#name-and-age {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
 .grid.two {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
@@ -351,7 +356,7 @@ body.about-page {
   animation: fadeInUp .9s ease;
 }
 .overskrift_info{
-  border-top: #696969 5px solid;
+  border-top: #676767 5px solid;
   padding: 0.5rem;
 }
 @media (max-width: 900px) {
@@ -389,6 +394,7 @@ body.about-page {
   border-radius: 1rem;
   border: 1px solid rgba(255,255,255,0.15);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: fit-content;
